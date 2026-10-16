@@ -1,0 +1,11 @@
+title: Field Notes on Compression
+description: Five-hour research summaries on the route to a complete, exactly decodable Hutter or LTCB win.
+url: https://jerecoder.github.io
+baseurl: /entropy-forge-field-notes
+repository: https://github.com/jerecoder/entropy-forge-field-notes
+markdown: kramdown
+permalink: /notes/:year/:month/:day/:title/
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
