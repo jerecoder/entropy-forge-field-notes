@@ -30,6 +30,10 @@ Even under the favorable assumption that the fitted-region improvement carried a
 
 Reducing its precision cut the weight cost, but also damaged the predictions. In the corresponding six-bit version, the same conditional subtotal grew by about **1.87 MB**. The smaller file of weights produced a worse projected subtotal.
 
+![Added weights exceed projected prediction savings for both models. The conditional subtotal grows by 0.51 MB for the seven-bit model and 1.87 MB for the six-bit model.]({{ '/assets/figures/model-storage-tradeoff.png' | relative_url }})
+
+*Figure 1. Both variants add bytes even in the conditional calculation that applies their fitted-region rates to all 586,459,020 transformed bytes. This assumes one copy of the weights and excludes the remaining codec costs. Whole-file transfer is unverified. [Numerical source]({{ '/assets/data/model-storage-tradeoff.json' | relative_url }}); [vector figure]({{ '/assets/figures/model-storage-tradeoff.svg' | relative_url }}).*
+
 ## The more serious problem was coverage
 
 That favorable extrapolation was also unsupported. The available broader fitting endpoints remained behind the released model. One distributed fitting run finished at **1.665**, against a matched released baseline of **1.272**, on roughly 4.35 million targets drawn from sixteen regions.

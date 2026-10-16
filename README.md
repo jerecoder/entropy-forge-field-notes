@@ -13,3 +13,5 @@ Post source paths and SHA-256 digests identify the private research records behi
 The essays use an argument-led structure: question, prediction or competing explanations, evidence, uncertainty, and implications for the research plan. They assume technical literacy without knowledge of internal execution machinery.
 
 The site uses Jekyll’s stock Minima theme with standard home, page, and post layouts. No custom CSS, JavaScript, or layout overrides are used. The existing Pages workflow builds and deploys it; post URLs remain unchanged.
+
+Use figures where they clarify evidence: learning curves, model-storage tradeoffs, and mechanism diagrams. Scientific plots include numerical sources, labeled units and scope, a caption, and alt text. The model-storage essay now includes a data-backed comparison and a downloadable vector figure.

@@ -1,0 +1,27 @@
+{
+  "source_sha256": "69ce29558038cc359345e7b81cce7c2c364ef0b8ceffe610f58e638c3f9cd608",
+  "released_weight_bytes": 2930652,
+  "transformed_source_bytes": 586459020,
+  "model_copies": 1,
+  "scope": "Fitted 8 MiB region; whole-file quality is unknown.",
+  "projection_assumption": "The fitted-region rates hold across the entire transformed file.",
+  "excludes": "Native adaptive mixer, preprocessing, framing, code, other decoder artifacts and eligibility. This is not a measured package.",
+  "models": [
+    {
+      "label": "7-bit model",
+      "weight_bytes": 44426255,
+      "fitted_bits_per_target": 0.501758511720048,
+      "released_bits_per_target": 1.0609108793496567,
+      "fitted_targets": 8384073,
+      "conditional_net_extra_bytes": 505609.30615749955
+    },
+    {
+      "label": "6-bit model",
+      "weight_bytes": 38258864,
+      "fitted_bits_per_target": 0.6045535000081566,
+      "released_bits_per_target": 1.0609108793496567,
+      "fitted_targets": 8384073,
+      "conditional_net_extra_bytes": 1873849.3177019507
+    }
+  ]
+}
