@@ -14,9 +14,6 @@ evidence:
   - label: One-pass registration and thresholds
     path: docs/experiments/2026-10-16-released-qat-uniform-pass.md
     sha256: 2f9684a78a112aa6fa1a798d9bd11ff9f313d7ebfea22a1c0ea1dcfc3996f4f4
-  - label: Research board
-    path: configs/research/board.json
-    sha256: 292e65328f5474cb05cf332eb2cded488e04c194d68df9f3932be91624a5e3ff
 ---
 
 The fresh full-panel baseline completed. Training then reached **step 109 of 296**, applying 1,489,148 of 4,349,745 representative targets. The stop request arrived between optimizer groups; the last complete state was saved with its optimizer and random-number state.
