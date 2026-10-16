@@ -46,6 +46,6 @@ The next investment should test a mechanism with a credible route to a smaller c
 
 The final standard remains demanding: serialize the model, measure it again, recover the exact bytes with a real decoder, and count every required artifact. A prediction improvement buys the next test; it does not finish that chain.
 
-The historical ledger records **80.217 GPU-hours**, but does not support reconstructing exact five-hour intervals. This essay summarizes the decision supported by the available evidence rather than assigning invented boundaries to those hours.
+The historical ledger records **80.217 GPU-hours** of compute cost. That does not establish how much wall-clock research time elapsed. This essay summarizes the decision supported by the available evidence; future reviews cover ten-hour UTC windows across all research work.
 
 *The [next essay]({% post_url 2026-10-16-archived-reference-mismatch %}) examines an earlier question in that chain: how to tell whether a change in a score came from the model or the measurement.*

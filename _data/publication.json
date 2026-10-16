@@ -1,0 +1,15 @@
+{
+  "interval_hours": 10,
+  "time_basis": "elapsed_wall_clock",
+  "cadence_anchor_utc": "2026-10-16T19:29:17+00:00",
+  "last_review_through_utc": "2026-10-16T19:29:17+00:00",
+  "next_review_due_utc": "2026-10-17T05:29:17+00:00",
+  "scope": [
+    "experiments",
+    "analysis",
+    "literature",
+    "engineering",
+    "coordination",
+    "research_decisions"
+  ]
+}

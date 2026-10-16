@@ -2,9 +2,9 @@
 
 Public research essays for the effort to build a smaller, complete, exactly decodable Hutter or LTCB package.
 
-Read the journal at <https://jerecoder.github.io/entropy-forge-field-notes/>. The accounting follows cumulative charged GPU campaign time. A milestone essay is due every five hours; focused notes explain decision-changing experiments between milestones.
+Read the journal at <https://jerecoder.github.io/entropy-forge-field-notes/>. A research review is due every ten elapsed wall-clock hours, covering experiments, analysis, literature, CPU work, engineering, negative findings, coordination, and research decisions. GPU time is reported separately as a cost metric.
 
-The available itemized ledger begins at 80.216691312 GPU-hours. Earlier work is summarized in a retrospective because the per-run history needed to reconstruct exact five-hour slices is unavailable. The next milestone essay is due at 85 GPU-hours.
+The existing essays are a historical retrospective. The GPU ledger begins with an inherited 80.216691312-hour compute-cost total; it cannot be converted into an elapsed research timeline. The current UTC reporting window and next deadline are recorded in `_data/publication.json`. Publication can be delayed while the coordinator host is unavailable; a subsequent review covers the gap explicitly.
 
 Post source paths and SHA-256 digests identify the private research records behind each account. This public repository contains the readable notes only, not reports, checkpoints, raw logs, or project code. Execution completion remains separate from scientific acceptance.
 

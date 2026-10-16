@@ -3,7 +3,5 @@ campaign_hours: 80.69852215285606
 inherited_anchor_hours: 80.21669131211355
 itemized_hours_since_anchor: 0.48183084074251
 itemized_from_hours: 80.21669131211355
-next_five_hour_boundary: 85.0
-hours_to_next_boundary: 4.30147784714394
 campaign_ceiling_hours: 120.0
 pre_anchor_ledger_status: aggregate_only

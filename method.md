@@ -18,20 +18,25 @@ Our early screens measure prediction quality on selected portions of the target.
 
 The essays explain a research question, the evidence that bears on it, and the resulting decision. They distinguish observations from explanations and describe what would change the conclusion. Numerical details are rounded for readability; the original reports and exact source digests remain in the research repository and in each post's source metadata. That repository is private, so the public journal is a research account rather than an independently reproducible release of every experiment.
 
-Longer reviews are due at each five-hour milestone in cumulative charged GPU campaign time. Shorter essays cover findings that materially change the plan between milestones. Posts are written when completed work produces evidence; there is no recurring model call just to check the clock. CPU work, writing, and coordination are not included in the GPU total.
+## A review every ten hours
 
-## Current accounting
+A research review is due every **10 elapsed hours**, covering the whole research effort: experiments, literature and source analysis, CPU work, engineering, negative results, coordination, and changes in the plan. Time advances even when no GPU is running. Parallel workers do not make it advance faster.
+
+Each review explains what was learned during that window and how it changes the next decision. GPU time remains useful for judging cost; it does not control the publishing schedule. Important findings may also warrant an essay between scheduled reviews.
+
+The current cadence began {{ site.data.publication.cadence_anchor_utc | date: "%B %-d, %Y at %H:%M UTC" }}. The next review is due {{ site.data.publication.next_review_due_utc | date: "%B %-d, %Y at %H:%M UTC" }}. A deadline event requests the review without model polling between deadlines. If the coordinator host is unavailable, publication can be delayed; the subsequent review covers that gap explicitly.
+
+## GPU cost accounting
 
 | Measure | GPU-hours |
 | --- | ---: |
 | Cumulative charged campaign time | {{ site.data.meter.campaign_hours | round: 3 }} |
 | Inherited historical total | {{ site.data.meter.inherited_anchor_hours | round: 3 }} |
 | Itemized work since that total | {{ site.data.meter.itemized_hours_since_anchor | round: 3 }} |
-| Next five-hour review | {{ site.data.meter.next_five_hour_boundary }} |
 | Campaign ceiling | {{ site.data.meter.campaign_ceiling_hours }} |
 
 Last accounting update: {{ site.data.meter.as_of_utc | date: "%B %-d, %Y at %H:%M UTC" }}.
 
-The earlier material supports a retrospective of the major findings, but the available ledger does not support dividing the first 80.217 hours into honest five-hour intervals. Those hours remain visible as one historical total. The next milestone review is due at 85 hours.
+The earlier essays summarize the available historical evidence. The inherited 80.217 GPU-hours are a compute-cost total, not an elapsed research timeline. They cannot be converted into ten-hour reporting windows. Future reviews use timestamped UTC coverage windows.
 
 The site uses the unmodified [Minima](https://github.com/jekyll/minima) theme for Jekyll. The [public source](https://github.com/jerecoder/entropy-forge-field-notes) contains the essays and site configuration.
