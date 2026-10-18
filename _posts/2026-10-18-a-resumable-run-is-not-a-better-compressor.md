@@ -4,7 +4,7 @@ title: A resumable run is not yet a better compressor
 summary: Full-file training survived a host change and a connection failure, but the evidence still stops short of a representative quality result. The key question is whether broad coverage can repay model storage.
 research_span: Full-file teacher continuation and native exact-recovery planning, 16–18 October 2026
 campaign_range: 80.698522 / 120 historical GPU-hours; separate 160-hour full-file allocation
-cost_label: 216.86-second RTX 4090 diagnostic; no accepted quality result
+cost_label: 3,107-second native preparation; 216.86-second GPU diagnostic; no accepted quality result
 outcome: Operational recovery improved; compression advantage unmeasured
 outcome_class: incomplete
 evidence:
@@ -17,6 +17,9 @@ evidence:
   - label: Recovery-controller receipt
     path: reports/studies/full-enwik9-20261017/udesa-recovery-20261018.json
     sha256: bb1958fbd898693d4bd80f2c4e951ce6bfcba006720a2a9fa269e65ed82f4e16
+  - label: Native preparation and baseline receipt
+    path: reports/studies/full-enwik9-20261017/setup-result.json
+    sha256: b72eaf931fb6021f2d0edc55883f352dc7448c361a592a489e1747cf6f1758b9
   - label: Native pair runner completion
     path: reports/studies/research-coordination-20261016-lanes/native-pair-completion-v1.json
     sha256: f45b6030bbfa7e6ed8a1ea5180d4ddcac42787f2058425379c1499e43e52a1f9
@@ -47,6 +50,8 @@ The proposed screening threshold is an improvement of **0.02 bits per target** a
 The laptop reached step 55,215 and 35.2 million targets—about six percent of the first full-file pass—then paused when available memory crossed its registered floor. A separate RTX 4090 check restored that checkpoint into a disposable subset run. Across 64 optimizer updates and 522,692 unique targets, its fixed subset score moved from **2.430 to 2.259 bits per target**.
 
 That movement shows the training code can update the model on the new GPU. It does not show improvement on the sixteen-region panel: the subset is smaller, overlaps fitting, and is a different population. The measured post-warmup rate, about **12,841 targets per second**, was nearly twice an earlier laptop observation, but the workloads were unmatched. The resulting 12.7-hour-per-pass estimate excludes the 240 GB of prior data staging, larger-population overhead, full-panel scoring and interruptions. It is a scheduling hint, not a verified full-pass cost.
+
+There was also substantial work before GPU fitting. Native PPM preparation on the Mac processed the full 586,459,020-byte source in **3,107 seconds** (about 52 minutes). Its receipt records about **216.8 GB of newly required prior chunks**, alongside **27.5 GB of reusable prior data**, and exact parity for the first 8 MiB against fresh native output. That preparation makes full-file training possible; it is a separate CPU-and-storage cost that the throughput projection does not include, and it says nothing about compression quality.
 
 Recovery mechanics did improve. An intentional process exit resumed from the same registration without replaying the first committed group. Later, a connection loss produced a clean checkpoint; two external copies were hash-verified and a CPU reload checked optimizer state, random state and the exact cursor before the recovery controller resumed the frozen job. These checks make partial work safer to preserve. They do not establish current live status or model quality, and this review does not infer either from an older “running” snapshot.
 
